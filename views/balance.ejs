@@ -27,109 +27,37 @@
 </head>
 <body>
 
-		<div style="width: 90%; margin: auto; text-align: center;">
 
+	<div style="width: 90%; margin: auto; text-align: center;">
 			<h1>Application of Big Data</h1>
+			<h3>Average balance by age visualization</h3>
 
-			<h3>Add a bank account</h3>
-
-			<% if(locals.was_added && locals.was_added == true){ 
+			<% 
+			if (locals.error == true){ 
 			%>
-			<p style="color: green; margin-bottom: 30px; text-align: center;">Bank account added.</p>
+			<p style="color: red; margin-bottom: 30px; text-align: center;"><%= error_message %></p>
+			<br />
 			<form style="display: inline-block;" action="/">
 				<button type="submit" class="btn btn-primary">
-					Go to home
+					Refresh
 				</button>
 			</form>
-			<%
+			<% 
 			}
-			else if (locals.error == true){ 
-				%>
-				<p style="color: red; margin-bottom: 30px; text-align: center;"><%= error_message %></p>
-				<br />
-				<form style="display: inline-block;" action="/to_add">
-					<button type="submit" class="btn btn-primary">
-						Refresh
-					</button>
-				</form>
-				<% 
-				}
 			else{
 			%>
+			<p><%- locals.image %></p>
 
 			<form style="display: inline-block;" action="/">
 				<button type="submit" class="btn btn-primary">
-					Go to Overview
+					Go to Overwiew
 				</button>
 			</form>
-
-			<br /> <br />
-
-			<form action="add" method="get">
-				<div class="form-row">
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="Account Number" name="account number">
-					</div>
-				  </div>
-				  <br />
-				<div class="form-row">
-				  <div class="col">
-					<input type="text" class="form-control" placeholder="First name" name="firstname">
-				  </div>
-				  <div class="col">
-					<input type="text" class="form-control" placeholder="Last name" name="lastname">
-				  </div>
-				</div>
-				<br />
-				<div class="form-row">
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="Gender" name="gender">
-					</div>
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="Age" name="age">
-					</div>
-				  </div>
-				  <br />
-				  <div class="form-row">
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="State" name="state">
-					</div>
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="City" name="city">
-					</div>
-				  </div>
-				  <br />
-				  <div class="form-row">
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="Address" name="address">
-					</div>
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="email" name="email">
-					</div>
-				  </div>
-				  <br />
-				  <div class="form-row">
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="Employer" name="employer">
-					</div>
-					<div class="col">
-					  <input type="text" class="form-control" placeholder="Balance" name="balance">
-					</div>
-				  </div>
-				  <br />
-
-					<button  type="submit" class="btn btn-success"">
-						Add
-					</button>
-				  
-			  </form>
-
 			<%
 			}
 			%>
-	
-		
-		</div>
+	</div>
+
 
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
