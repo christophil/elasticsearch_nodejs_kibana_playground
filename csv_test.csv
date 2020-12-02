@@ -1,0 +1,4 @@
+﻿account_number;firstname;lastname;gender;age;state;city;address;email;employer;balance
+1001;Bob;Robert;M;22;France;Paris;2 rue de Paris;test@mail.fr;Apple;20000
+1002;Marc;Lavoie;M;40;UK;London;2 street of london;test@mail.fr;Bank of London;15000
+1003;Ousmane;Dembele;M;23;FR;Paris;2 rue de Paris;test@mail.fr;Bank of London;10000
